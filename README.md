@@ -1,147 +1,157 @@
+
 # 🧊 WebGL Sample Projects
-### (Bilgisayar Grafiği Dersi Kapsamında Hazırladığım WebGL Çalışmaları)
+### (Computer Graphics Course – WebGL Exercises & Assignments)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](#)
 [![WebGL](https://img.shields.io/badge/WebGL-990000?style=flat&logo=webgl&logoColor=white)](#)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](#)
 
-Bu depo, Bilgisayar Grafiği dersi kapsamında WebGL kullanarak geliştirdiğim temel grafik programlama örneklerini ve ödevleri içermektedir. Çalışmalar; gölgelendirici (shader) yönetimi, model dönüşümleri, etkileşim ve ünlü fraktal yapılar gibi konuları kapsar.
+This repository contains my **Computer Graphics** course projects and experiments using **WebGL**. It covers shader management, model transformations, interaction, and well‑known fractal structures, all rendered directly in the browser.
 
-## 📚 İçindekiler
-- [Proje Hakkında](#proje-hakkında)
-- [Özellikler](#özellikler)
-- [Kullanılan Teknolojiler ve Kaynaklar](#kullanılan-teknolojiler-ve-kaynaklar)
-- [Kurulum ve Kullanım](#kurulum-ve-kullanım)
-- [Proje Yapısı](#proje-yapısı)
-- [Geliştirme Süreci](#geliştirme-süreci)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [İletişim](#iletisim)
-- [Lisans](#lisans)
-
----
-
-## Proje Hakkında
-Bu çalışma, bilgisayar grafiğinin temel prensiplerini (model-view dönüşümleri, ışıklandırma modelleri, tampon nesneler) uygulamalı olarak öğrenmek amacıyla hazırlanmıştır. Her bir klasör, bağımsız olarak çalıştırılabilen farklı bir WebGL sahnesini içerir.
-
-* **Geliştirici:** Haluk Can SARIÖZ
-* **Ders:** Bilgisayar Grafiği (Computer Graphics)
-* **Amaç:** GPU tabanlı grafik programlamayı ve OpenGL ES gölgelendirici yapısını kavramak
+## 📚 Table of Contents
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Technologies & Resources](#technologies--resources)
+- [Installation & Usage](#installation--usage)
+- [Project Structure](#project-structure)
+- [Development Process](#development-process)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [License](#license)
 
 ---
 
-## Özellikler
-* **Gerçek Zamanlı Render:** Doğrudan tarayıcı üzerinde GPU hızlandırmalı grafik işleme.
-* **Çoklu Örnek:** Temel çizimden, gölgeli cisimlere ve etkileşimli uygulamalara kadar farklı zorluk seviyelerinde projeler.
-* **Phong Işık Modeli:** `Shaded Teapot` ve bazı ödevlerde Phong yansıma modelinin pratik uygulaması.
-* **Kullanıcı Etkileşimi:** Fare ve klavye ile 3B cisimlerin (özellikle demlik modelinin) kontrolü.
-* **Yardımcı Kütüphaneler:** Ders kapsamında sağlanan `initShaders` ve `MV.js` gibi yardımcı araçların etkin kullanımı.
+## About the Project
+This work was created to learn the fundamentals of computer graphics (model‑view transformations, lighting models, buffer objects) through hands‑on WebGL applications. Each folder is an independent, runnable WebGL scene.
+
+- **Developer:** Haluk Can SARIÖZ
+- **Course:** Computer Graphics
+- **Goal:** Understand GPU‑based programming and OpenGL ES shader structures
 
 ---
 
-## Kullanılan Teknolojiler ve Kaynaklar
-* **WebGL (OpenGL ES 2.0):** Temel grafik API'si.
-* **JavaScript (ES6):** Tüm uygulama mantığı ve shader yönetimi.
-* **HTML5 Canvas:** Görüntüleme yüzeyi.
-* **Eğitim Kaynakları:** Proje, büyük ölçüde Prof. Edward Angel'ın kaynak kodlarına dayanmaktadır:
-  * [WebGL Examples (UNM)](https://www.cs.unm.edu/~angel/WebGL/)
-* **Teorik Altyapı:**
-  * [Phong Reflection Model (Wikipedia)](https://en.wikipedia.org/wiki/Phong_reflection_model)
+## Features
+- **Real‑Time Rendering:** GPU‑accelerated graphics directly in the browser.
+- **Multiple Examples:** From basic primitive drawing to shaded objects and interactive applications.
+- **Phong Lighting Model:** Practical implementation of Phong reflection in `Shaded Teapot` and related assignments.
+- **User Interaction:** Mouse and keyboard control of 3D objects (especially the Utah teapot).
+- **Helper Libraries:** Effective use of `initShaders` and `MV.js` provided during the course.
 
 ---
 
-## Kurulum ve Kullanım
+## Technologies & Resources
+- **WebGL (OpenGL ES 2.0)** – Core graphics API.
+- **JavaScript (ES6)** – Application logic and shader management.
+- **HTML5 Canvas** – Rendering surface.
+- **Educational Sources:** The projects heavily rely on Prof. Edward Angel’s resources:
+  - [WebGL Examples (UNM)](https://www.cs.unm.edu/~angel/WebGL/)
+- **Theory:**
+  - [Phong Reflection Model (Wikipedia)](https://en.wikipedia.org/wiki/Phong_reflection_model)
 
-Bu projeler sunucu taraflı herhangi bir kod içermediği için herhangi bir paket yüklemeye gerek yoktur. Ancak, WebGL shader'ları dış kaynaklı dosyalardan yüklendiği için **doğrudan dosyaya çift tıklayarak çalıştırmak güvenlik kısıtlamalarına takılabilir.**
+---
 
-Bu nedenle, bir yerel sunucu (local server) üzerinden çalıştırmanız **zorunludur**.
+## Installation & Usage
 
-### 1. Depoyu Klonlayın
+These projects contain no server‑side code, so no package installation is required. **However**, because WebGL shaders are loaded from external files, you **must** run them via a local server (opening the HTML files directly may be blocked by browser security policies).
+
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/halukcansarioz/WebGl-Sample.git
 ```
 
-### 2. Proje Dizinine Gidin
+### 2. Navigate to the Folder
 ```bash
 cd WebGl-Sample
 ```
 
-### 3. Yerel Sunucu Başlatın ve Çalıştırın
+### 3. Start a Local Server
 
-Aşağıdaki yöntemlerden birini kullanarak projeyi görüntüleyebilirsiniz:
+Choose one of the methods below:
 
-* **VS Code Live Server (Önerilen):** VS Code'da herhangi bir `.html` dosyasına sağ tıklayıp `"Open with Live Server"` seçeneğine tıklayın.
-* **Node.js `http-server`:**
+- **VS Code Live Server (recommended):** Right‑click any `.html` file → “Open with Live Server”.
+- **Node.js `http-server`:**
     ```bash
     npx http-server .
     ```
-    Komutu çalıştırdıktan sonra terminalde yazan adresi (genelde `http://127.0.0.1:8080`) tarayıcıda açın ve istediğiniz klasöre gidin.
-* **Python:** Python kurulu ise terminalde şu komutu çalıştırın:
+    Then open the address shown (usually `http://127.0.0.1:8080`).
+- **Python:**
     ```bash
     python -m http.server
     ```
 
-> ⚠️ **Not:** Projelerin çalışması için tarayıcınızın WebGL'yi desteklemesi gerekmektedir. Çoğu modern tarayıcı (Chrome, Firefox, Edge) varsayılan olarak destekler.
+### 4. Navigate & Enjoy
+Browse to the desired folder (e.g., `Base/`, `Shaded Teapot/`) and open the corresponding `.html` file.
+
+> ⚠️ **Note:** Your browser must support WebGL (all modern browsers do).
 
 ---
 
-## Proje Yapısı
-Her bir klasör, birbirinden bağımsız bir WebGL uygulamasını temsil eder. Bir klasörün içinde genellikle `.html` arayüz dosyası, `.js` mantık/shader dosyası ve ortak kütüphaneleri içeren bir `src` klasörü bulunur.
+## Project Structure
+Each folder represents an independent WebGL application, typically containing an `.html` interface file, a `.js` logic/shader file, and common libraries in `src`.
 
 ```text
 WebGl-Sample/
-├── Base/                 # Temel çokgen (küp) çizimi ve renklendirme
-├── Rotation/             # Döndürme dönüşümleri (Rotation transform)
-├── Teapot/               # Klasik Utah Demliği çizimi
-├── Shaded Teapot/        # Phong ışık modeli ile gölgelendirilmiş demlik
-├── View/                 # Kamera ve görüş açısı ayarları
-├── Interaction/          # Fare ve klavye etkileşimli demlik kontrolü
-├── Sierpinski/           # 2B Sierpinski Üçgeni fraktalı
-├── Sierpinski-2/         # Gelişmiş Sierpinski fraktal uygulaması
-├── İlk/                  # İlk WebGL denemesi (başlangıç seviyesi)
-├── Ödev/                 # Ders kapsamında teslim edilen ödev(ler)
-├── Ödev Örnek/           # Ödev için referans örnek çalışma
-├── Ödev-2/               # İkinci ödev çalışması
-└── README.md             # Proje dökümantasyonu
+├── Base/                 # Basic polygon (cube) drawing and coloring
+├── Rotation/             # Rotation transforms
+├── Teapot/               # Classic Utah Teapot rendering
+├── Shaded Teapot/        # Teapot with Phong lighting model
+├── View/                 # Camera and view angle settings
+├── Interaction/          # Mouse/keyboard interactive teapot
+├── Sierpinski/           # 2D Sierpinski Triangle fractal
+├── Sierpinski-2/         # Advanced Sierpinski implementation
+├── İlk/                  # First WebGL attempt (beginner level)
+├── Ödev/                 # Submitted assignment(s)
+├── Ödev Örnek/           # Reference example for the assignment
+├── Ödev-2/               # Second assignment
+└── README.md             # This file
 ```
 
 ---
 
-## Geliştirme Süreci
+## Development Process
 
-### 1. Forklama
-Kendi grafik denemelerinizi eklemek için depoyu fork'layabilirsiniz.
+### 1. Fork the Repository
+You can fork the project to add your own graphics experiments.
 
-### 2. Yeni Dal (Branch) Oluşturma
+### 2. Create a New Branch
 ```bash
-git checkout -b yeni-örnek/phong-küre
+git checkout -b feature/new-shader-demo
 ```
 
-### 3. Kodları Gönderme (Push)
+### 3. Push Your Code
 ```bash
-git push origin yeni-örnek/phong-küre
+git push origin feature/new-shader-demo
 ```
 
 ---
 
-## Katkıda Bulunma
-1. Bu depoyu **Fork**'layın.
-2. Bir **Branch** oluşturun (`git checkout -b feature/YeniSahne`).
-3. Yeni bir klasöre `.html` ve `.js` dosyalarınızı ekleyin.
-4. Değişikliklerinizi **Commit** edin (`git commit -m 'Ekleme: Yeni ışıklandırma örneği'`).
-5. Kodlarınızı **Push**'layın (`git push origin feature/YeniSahne`).
-6. Bir **Pull Request** açın.
+## Contributing
+1. **Fork** this repository.
+2. Create a **Branch** (`git checkout -b feature/NewScene`).
+3. Add your `.html` and `.js` files in a new folder.
+4. **Commit** your changes (`git commit -m 'Add: New lighting example'`).
+5. **Push** your branch (`git push origin feature/NewScene`).
+6. Open a **Pull Request**.
 
-> 💡 **Öneri:** Yeni bir örnek eklerken, ortak `src` klasörünü kullanarak `initShaders` ve `MV.js` gibi yardımcı fonksiyonlara erişebilirsiniz.
-
----
-
-<a name="iletisim"></a>
-## İletişim
-**Haluk Can Sarıöz** - [GitHub Profilim](https://github.com/halukcansarioz)  
-**Proje Linki:** [https://github.com/halukcansarioz/WebGl-Sample](https://github.com/halukcansarioz/WebGl-Sample)
+> 💡 **Tip:** When adding a new example, reuse the `src` folder for helper functions like `initShaders` and `MV.js`.
 
 ---
 
-## Lisans
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+<a name="contact"></a>
+## Contact
+**Haluk Can Sarıöz**
+- GitHub: [@halukcansarioz](https://github.com/halukcansarioz)
+- Email: [halukcansarioz19@gmail.com](mailto:halukcansarioz19@gmail.com)
+- LinkedIn: [Haluk Can Sarıöz](https://www.linkedin.com/in/halukcansarioz)
+
+**Project Link:** [https://github.com/halukcansarioz/WebGl-Sample](https://github.com/halukcansarioz/WebGl-Sample)
+
+---
+
+*Found this helpful? Please ⭐ the repository!*
+
+---
+
+## License
+This project is licensed under the [MIT License](LICENSE).
